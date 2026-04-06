@@ -16,7 +16,7 @@ def information(icao_id):
     else:
         error_notice = {"ERROR": "Airport not found.",
                         "MESSAGE": f"The flight code {icao_id} not found."}
-        return jsonify(error_notice)
+        return jsonify(error_notice),404
 if __name__ == "__main__":
     print("http://127.0.0.1:5000/airport/LFLL")
     print("http://127.0.0.1:5000/airport/00AK")
